@@ -35,7 +35,7 @@ public abstract class PlayerEntityMixin {
         if (inside == Blocks.NETHER_PORTAL) {
             radioactiveportals$ticksInPortal++;
 
-            if (radioactiveportals$ticksInPortal >= 2400 / 80) {
+            if (radioactiveportals$ticksInPortal >= 2400) { // 2 minutes
                 this.damage(serverWorld, ModDamageTypes.portalRadiation(serverWorld), Float.MAX_VALUE);
 
                 radioactiveportals$ticksInPortal = 0;
