@@ -1,5 +1,6 @@
 package de.zonlykroks.radioactiveportals.mixin;
 
+import de.zonlykroks.radioactiveportals.ModMenuEntrypoint;
 import de.zonlykroks.radioactiveportals.Radioactiveportals;
 import de.zonlykroks.radioactiveportals.init.ModDamageTypes;
 import net.minecraft.block.Block;
@@ -35,7 +36,7 @@ public abstract class PlayerEntityMixin {
         if (inside == Blocks.NETHER_PORTAL) {
             radioactiveportals$ticksInPortal++;
 
-            if (radioactiveportals$ticksInPortal >= 2400) { // 2 minutes
+            if (radioactiveportals$ticksInPortal >= ModMenuEntrypoint.timeTillDeathInSeconds * 20) {
                 this.damage(serverWorld, ModDamageTypes.portalRadiation(serverWorld), Float.MAX_VALUE);
 
                 radioactiveportals$ticksInPortal = 0;

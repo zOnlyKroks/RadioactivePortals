@@ -12,6 +12,9 @@
   "entrypoints": {
     "main": [
       "de.zonlykroks.radioactiveportals.Radioactiveportals"
+    ],
+    "modmenu": [
+      "de.zonlykroks.radioactiveportals.ModMenuEntrypoint"
     ]
   },
   "mixins": [
