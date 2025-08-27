@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "radioactiveportals",
+  "version": "${version}",
+  "name": "RadioactivePortals",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.zonlykroks.radioactiveportals.Radioactiveportals"
+    ]
+  },
+  "mixins": [
+    "radioactiveportals.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
